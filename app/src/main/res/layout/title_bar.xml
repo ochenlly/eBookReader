@@ -20,11 +20,11 @@
             android:background="@color/white"
             app:title="Title"
             app:titleTextColor="@android:color/white">
+
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="My Title"
                 android:textSize="18sp"
                 android:textStyle="bold" />
             <!-- SearchView -->
@@ -32,26 +32,26 @@
                 android:id="@+id/search_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:queryHint="Search"
+                android:background="@drawable/search_view_bg"
+                android:queryHint="搜索"
+                app:closeIconEnabled="true"
                 app:iconifiedByDefault="false"
                 app:queryBackground="@android:color/transparent"
-                app:closeIconEnabled="true"
-                android:background="@drawable/search_view_bg"
                 />
+
             <ImageView
                 android:id="@+id/list"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/menu"
                 android:layout_gravity="center"
-                />
+                android:src="@drawable/menu" />
+
             <ImageView
                 android:id="@+id/plus"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/plus"
                 android:layout_gravity="center"
-                />
+                android:src="@drawable/plus" />
 
         </androidx.appcompat.widget.Toolbar>
 

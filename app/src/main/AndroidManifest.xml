@@ -31,6 +31,9 @@
         <activity android:name=".ContentActivity"
             android:exported="false"
             />
+        <activity android:name=".OneTypeActivity"
+            android:exported="false"
+            />
         <activity
             android:name=".TabHostActivity"
             android:exported="true">

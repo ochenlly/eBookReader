@@ -2,12 +2,12 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_selected="true">
         <layer-list>
-            <item android:drawable="@drawable/second_tab_pressed" android:width="20dp" android:height="20dp"/>
+            <item android:drawable="@drawable/menu_book_press" android:width="20dp" android:height="20dp"/>
         </layer-list>
     </item>
     <item>
         <layer-list>
-            <item android:drawable="@drawable/second_tab_normal" android:width="20dp" android:height="20dp"/>
+            <item android:drawable="@drawable/menu_book" android:width="20dp" android:height="20dp"/>
         </layer-list>
     </item>
 </selector>
