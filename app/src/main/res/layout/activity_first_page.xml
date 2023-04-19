@@ -7,9 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".FirstPageActivity"
     >
+    <!--头部插入title_bar实现布局的复用和模块化-->
     <include
         android:id="@+id/title"
-        layout="@layout/title_bar"
+        layout="@layout/topbar"
         app:layout_constraintTop_toTopOf="parent"
         />
     <androidx.recyclerview.widget.RecyclerView

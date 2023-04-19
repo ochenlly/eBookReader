@@ -13,6 +13,7 @@ MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //创建一个具体的数据库对象
         db = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "eBookReader").fallbackToDestructiveMigration().build();
     }

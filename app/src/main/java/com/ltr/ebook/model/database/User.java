@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "user")
 public class User {
+    //注解为主键和自动生成一个唯一的值
     @PrimaryKey(autoGenerate = true)
     public int id;
     public int userId;
@@ -14,9 +15,12 @@ public class User {
     private String author;
     private String fictionType;
     private String descs;
+    //封面图片地址
     private String cover;
     private String updateTime;
+    //标记章节
     public int position;
+    //对应章节名字
     public String readChapter;
     //是否加入书架
     public boolean flag;

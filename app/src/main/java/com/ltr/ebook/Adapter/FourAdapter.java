@@ -34,7 +34,7 @@ public class FourAdapter extends RecyclerView.Adapter<FourAdapter.ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_four, parent, false);
+                .inflate(R.layout.fourth, parent, false);
         final ViewHolder holder = new ViewHolder(view);
         // 设置点击事件
         view.setOnClickListener(new View.OnClickListener() {

@@ -8,16 +8,16 @@
     >
     <include
         android:id="@+id/title"
-        layout="@layout/title_bar"
+        layout="@layout/topbar"
         app:layout_constraintTop_toTopOf="parent"
         />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/book_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="#D8CBB6"
         android:padding="8dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,7 +29,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_book_content, parent, false);
+                .inflate(R.layout.content, parent, false);
         final ContentAdapter.ViewHolder holder=new ContentAdapter.ViewHolder(view);
         return holder;
     }

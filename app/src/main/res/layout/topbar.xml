@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- AppBarLayout 包含 Toolbar -->
+    <!-- AppBarLayout 垂直线性布局 与 Toolbar 结合 -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,15 +19,18 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             app:title="Title"
-            app:titleTextColor="@android:color/white">
-
+            app:titleTextColor="@android:color/white"
+            >
+            <!--展示标题文字信息-->
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:textStyle="bold" />
-            <!-- SearchView -->
+                android:textStyle="bold"
+                android:text="加载中"
+                />
+            <!-- SearchView 搜索框-->
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/search_view"
                 android:layout_width="match_parent"
@@ -35,36 +38,26 @@
                 android:background="@drawable/search_view_bg"
                 android:queryHint="搜索"
                 app:closeIconEnabled="true"
-                app:iconifiedByDefault="false"
+                app:iconifiedByDefault="true"
                 app:queryBackground="@android:color/transparent"
                 />
-
+            <!-- 显示章节按钮图标-->
             <ImageView
                 android:id="@+id/list"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:src="@drawable/menu" />
-
+            <!--添加到收藏加号按钮-->
             <ImageView
                 android:id="@+id/plus"
-                android:layout_width="70dp"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/plus" />
+                android:src="@drawable/add" />
 
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <!-- 其他视图 -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white">
-
-        <!-- 在这里添加其他视图 -->
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

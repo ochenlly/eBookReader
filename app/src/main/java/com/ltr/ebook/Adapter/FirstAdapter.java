@@ -57,42 +57,48 @@ public class FirstAdapter extends RecyclerView.Adapter<FirstAdapter.ViewHolder> 
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_first, parent, false);
-
-
+                .inflate(R.layout.first, parent, false);
         final ViewHolder holder = new ViewHolder(view);
         // 设置点击事件
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //通过适配器找位置信息显示对应位置的bookList数组
                 int position = holder.getAdapterPosition();
                 Book book = bookList.get(position);
+                //Intent 是 Android 中用于在不同组件之间传递数据和启动组件的一种机制
+                //将context即 activity传入的booklist 再 传入ContentActivity
                 Intent intent = new Intent(context, ContentActivity.class);
+                // Intent 中添加book和flag
                 intent.putExtra("book", book);
                 intent.putExtra("flag", flag);
+                //启动ContentActivity
                 context.startActivity(intent);
             }
         });
         return holder;
     }
 
+    //更新列表项的数据时被调用
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Book book = bookList.get(position);
-        holder.book_title.setText(book.getTitle());
+        holder.book_title.setText("<<"+book.getTitle()+">>");
         holder.book_author.setText(book.getAuthor());
         holder.read_chapter.setText(book.getReadChapter());
         holder.book_delete.setOnClickListener(v->{
             new Thread(() -> {
                 MyApplication app = (MyApplication) context.getApplicationContext();
                 AppDatabase db = app.getDatabase();
+                //点击删除后,将flag标记为false,表示去掉收藏再更新表
                 User user = db.userDao().get(book.getFictionId(), 1);
                 user.setFlag(false);
                 db.userDao().updateAll(user);
+                //更新视图
                 EventBus.getDefault().post(new UpdateUIEvent());
             }).start();
         });
-        // 使用网络请求库下载图片
+        // 用glide通过地址快速、高效地加载图片
         Glide.with(holder.itemView).load(book.getCover()).into(holder.book_cover);
     }
 

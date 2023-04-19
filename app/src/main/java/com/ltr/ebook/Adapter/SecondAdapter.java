@@ -49,7 +49,7 @@ public class SecondAdapter extends RecyclerView.Adapter<SecondAdapter.ViewHolder
     public SecondAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_second, parent, false);
+                .inflate(R.layout.second, parent, false);
         final SecondAdapter.ViewHolder holder = new SecondAdapter.ViewHolder(view);
         // 设置点击事件
         view.setOnClickListener(new View.OnClickListener() {

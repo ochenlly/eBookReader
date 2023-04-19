@@ -2,6 +2,7 @@ package com.ltr.ebook.model;
 
 import java.io.Serializable;
 
+//电子书的各个属性
 public class Book implements Serializable {
 
     private String fictionId;
@@ -13,7 +14,6 @@ public class Book implements Serializable {
     private String updateTime;
     private String readChapter;
 
-    public Book(){}
     public Book(String fictionId, String title, String author, String fictionType, String descs, String cover, String updateTime,String readChapter) {
         this.fictionId = fictionId;
         this.title = title;
@@ -23,19 +23,6 @@ public class Book implements Serializable {
         this.cover = cover;
         this.updateTime = updateTime;
         this.readChapter=readChapter;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "fictionId='" + fictionId + '\'' +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", fictionType='" + fictionType + '\'' +
-                ", descs='" + descs + '\'' +
-                ", cover='" + cover + '\'' +
-                ", updateTime='" + updateTime + '\'' +
-                '}';
     }
 
     public String getFictionId() {

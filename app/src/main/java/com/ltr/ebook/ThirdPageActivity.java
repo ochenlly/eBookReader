@@ -2,7 +2,6 @@ package com.ltr.ebook;
 
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,21 +9,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ltr.ebook.Adapter.ClassAdapter;
-import com.ltr.ebook.Adapter.SecondAdapter;
-import com.ltr.ebook.databinding.ActivityFirstPageBinding;
+import com.ltr.ebook.Adapter.ThreeAdapter;
 import com.ltr.ebook.databinding.ActivityThirdPageBinding;
 import com.ltr.ebook.model.Book;
 import com.ltr.ebook.model.ThirdItem;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.ltr.ebook.model.ThirdItem;
-
 
 
 public class ThirdPageActivity extends AppCompatActivity {
@@ -64,7 +57,7 @@ public class ThirdPageActivity extends AppCompatActivity {
         recyclerView1.setLayoutManager(layoutManager);
 
         // 创建 RecyclerViewAdapter 对象并设置给 RecyclerView
-        ClassAdapter adapter=new ClassAdapter(classList,this);
+        ThreeAdapter adapter=new ThreeAdapter(classList,this);
         recyclerView1.setAdapter(adapter);
 
 
